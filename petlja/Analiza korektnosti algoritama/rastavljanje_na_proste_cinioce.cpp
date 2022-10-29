@@ -1,16 +1,13 @@
 #include <iostream>
-
+#include <cmath>
 
 using namespace std;
 
-bool jeste_prost(unsigned long long n, unsigned long long najveci_delilac);
+bool jeste_prost(unsigned long long& n, unsigned long long& delilac);
 void ispisi_proste_cinioce(unsigned long long n);
 
 int main()
-{
-    ios_base::sync_with_stdio(0);
-    cin.tie(0);
-    
+{   
     unsigned long long n;
     cin >> n;
 
@@ -19,14 +16,16 @@ int main()
     return 0;
 }
 
-bool jeste_prost(unsigned long long n, unsigned long long najveci_delilac)
+bool jeste_prost(unsigned long long& n, unsigned long long& delilac)
 {
-    for (unsigned long long i = najveci_delilac; i <= n/2; i++)
+    while (delilac <= (unsigned long long)sqrt(n))
     {
-        if (n % i == 0)
+        if (n % delilac == 0)
         {
+            n /= delilac;
             return false;
         }
+        delilac++;
     }
     
     return true;
@@ -37,20 +36,23 @@ void ispisi_proste_cinioce(unsigned long long n)
     unsigned long long delilac = 2;
     while (n != 1)
     {
-        if (n % delilac == 0)
-        {
-            n /= delilac;
-            cout << delilac << ' ';
-        }
-        else if (jeste_prost(n, delilac))
+        if (jeste_prost(n, delilac))
         {
             cout << n << ' ';
             break;
         }
         else
         {
-            delilac++;
+            cout << delilac << ' ';
         }
+
+        while (n % delilac == 0)
+        {
+            cout << delilac << ' ';
+            n /= delilac;
+        }
+        delilac++;
     }   
-    cout << '\n';
+
+    cout << endl;
 }
