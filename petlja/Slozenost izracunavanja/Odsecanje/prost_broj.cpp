@@ -22,7 +22,7 @@ bool jesteProst(unsigned x)
         return false;
     }
     
-    for (unsigned i = 3; i <= (unsigned)sqrt(x); i++)
+    for (unsigned i = 3; i <= (unsigned)sqrt(x); i += 2)
     {
         if (x % i == 0)
         {
