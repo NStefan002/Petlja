@@ -29,10 +29,6 @@ int main()
     return 0;
 }
 
-unsigned long long sqr(unsigned long long x)
-{
-    return x*x;
-}
 
 unsigned long long zbir_elemenata_reda(unsigned long long redni_br_reda)
 {
