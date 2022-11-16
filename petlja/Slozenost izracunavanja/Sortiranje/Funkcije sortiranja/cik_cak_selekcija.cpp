@@ -39,9 +39,9 @@ int main()
         i to u slucaju da je n neparno */
     }
 
-    for (int i = 0; i < n; i++)
+    for (auto r : rez)
     {
-        cout << rez[i] << '\n';
+        cout << r << '\n';
     }
 
     return 0;

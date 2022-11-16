@@ -22,9 +22,9 @@ int main()
     
     sort(begin(brojevi), end(brojevi));
 
-    for (int i = 0; i < n; i++)
+    for (auto br : brojevi)
     {
-        cout << brojevi[i] << '\n';
+        cout << br << '\n';
     }
 
     return 0;
