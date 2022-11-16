@@ -41,19 +41,15 @@ int main()
         {
             return false;
         }
-        else if (strcmp(t1.ime, t2.ime) <= 0) // t1.ime <= t2.ime
+        else 
         {
-            return true;
-        }
-        else
-        {
-            return false;
+            return (strcmp(t1.ime, t2.ime) <= 0); // t1.ime <= t2.ime
         }
     });
     
-    for (int i = 0; i < n; i++)
+    for (auto& t : takmicari)
     {
-        cout << takmicari[i].ime << ' ' << takmicari[i].brPoena << '\n';
+        cout << t.ime << ' ' << t.brPoena << '\n';
     }
 
     return 0;
