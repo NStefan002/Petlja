@@ -36,7 +36,7 @@ int hIndeks(vector<int>& brCitata, int n)
         {
             return h;
         }
-        
+
         if (brCitata[i] >= h)
         {
             i--;
