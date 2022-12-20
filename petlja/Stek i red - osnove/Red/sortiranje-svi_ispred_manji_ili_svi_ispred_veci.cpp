@@ -16,7 +16,7 @@ int main()
         int br;
         cin >> br;
 
-        if (!sortiranNiz.empty() and br < sortiranNiz.back())
+        if (!sortiranNiz.empty() && br < sortiranNiz.back())
         {
             sortiranNiz.push_front(br);
         }
