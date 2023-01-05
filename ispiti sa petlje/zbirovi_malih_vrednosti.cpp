@@ -54,6 +54,8 @@ int main()
 
 int64_t pozPrvogVeceg(vector<int64_t> &niz, int64_t upit)
 {
+    /* Ukoliko nijedan element nije strogo veci od upita, funkcija
+    ce vratiti poziciju iza poslednje. */
     int64_t l = 0, d = niz.size() - 1;
 
     while (l <= d)
